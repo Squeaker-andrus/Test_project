@@ -1,16 +1,17 @@
 {% extends "basic.html" %}
 
-{% block title %}
-First app project
-{% endblock %}
+
 
 {% block content %}
+    {% block title %}
+        <h2>First app project</h2>
+    {% endblock %}
     {% for post in posts %}
-        <a href="{#  #}">
+        <a href="{% url "view-tread" tread_id=post.id %}">
             <h2>{{ post.title }}</h2>
         </a>
-        <span class="badge badge-primary">{{ post.created_time }}</span>
-        <a href="{#  #}" class="badge badge-secondary">Изменить</a>
+        <span class="navbar-dark">{{ post.created_time }}</span>
+        <a href="{#  #}" class="navbar-dark">Изменить</a>
         <hr>
     {% endfor %}
 {% endblock %}

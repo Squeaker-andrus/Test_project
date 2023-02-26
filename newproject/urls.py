@@ -20,5 +20,7 @@ from new_app import views
 
 urlpatterns = [
     path('admin/', admin.site.urls),
-    path("", views.show_threads),
+    path("", views.show_threads, name="main"),
+    path("create/", views.create_thread, name="create-thread"),
+    path("thread/<int:tread_id>", views.tread_view, name="view-tread")
 ]
