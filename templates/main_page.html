@@ -7,9 +7,10 @@ First app project
 {% block content %}
     {% for post in posts %}
         <a href="{#  #}">
-            <h2>post.title</h2>
+            <h2>{{ post.title }}</h2>
         </a>
-        <span class="badge badge-primary">{# #}</span>
+        <span class="badge badge-primary">{{ post.created_time }}</span>
         <a href="{#  #}" class="badge badge-secondary">Изменить</a>
         <hr>
+    {% endfor %}
 {% endblock %}

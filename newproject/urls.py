@@ -20,5 +20,5 @@ from new_app import views
 
 urlpatterns = [
     path('admin/', admin.site.urls),
-    path("", views.show_threads)
+    path("", views.show_threads),
 ]
