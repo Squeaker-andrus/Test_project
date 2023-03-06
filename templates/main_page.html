@@ -11,7 +11,7 @@
             <h2>{{ post.title }}</h2>
         </a>
         <span class="navbar-dark">{{ post.created_time }}</span>
-        <a href="{#  #}" class="navbar-dark">Изменить</a>
+        <a href="{% url "updater" post.id %}" class="navbar-dark">Изменить</a>
         <hr>
     {% endfor %}
 {% endblock %}

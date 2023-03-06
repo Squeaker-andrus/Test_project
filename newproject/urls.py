@@ -22,5 +22,7 @@ urlpatterns = [
     path('admin/', admin.site.urls),
     path("", views.show_threads, name="main"),
     path("create/", views.create_thread, name="create-thread"),
-    path("thread/<int:tread_id>", views.tread_view, name="view-tread")
+    path("thread/<int:tread_id>", views.tread_view, name="view-tread"),
+    path("thread/<int:tread_id>/update/", views.update_thread, name="updater"),
+    path("thread/<int:tread_id>/delete/", views.delete_thread, name="deleter")
 ]

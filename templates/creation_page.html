@@ -1,7 +1,9 @@
 {% extends 'basic.html' %}
 
 
+
 {% block content %}
+
     {% block title %}<h3>Create new thread</h3>{% endblock %}
     <form method="post">
         {% csrf_token %}
@@ -31,6 +33,9 @@
         </div>
         <div>
             <button type="Submit" class="btn-dark">Bling</button>
+
         </div>
+
     </form>
+    {% block extra %}{% endblock %}
 {% endblock %}
